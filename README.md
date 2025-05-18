@@ -4,6 +4,9 @@ Apenas um app de Banco digital feito para aprendizagem(nem tente usar para fazer
 Ele é feito em dart usando do framework flutter
 
 ## Telas
-****
-- **Tela Principal**: mostra as pricipais funçoes do app alem de mostrar o valor do dolar e do euro
-- **Tela de Opçoes de pagamentos**:
+
+- **Tela Principal**: mostra as pricipais funçoes do app alem de mostrar o valor do dolar e do euro;
+  
+- **Tela de Opçoes de pagamentos**: Responsavel por mostrar opcoes de pagamentos como pix e boleto;
+
+- **Tela de Login e Registrar conta** 
