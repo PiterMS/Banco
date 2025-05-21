@@ -1,5 +1,5 @@
 # Banco
-Apenas um app de Banco digital feito para aprendizagem(nem tente usar para fazer transações, já que seria imposivel).
+Apenas um app de Banco digital feito para aprendizagem(nem tente usar para fazer transações, já que seria imposivel)🫠🫠🫠.
 
 Ele é feito em dart usando do framework flutter
 
