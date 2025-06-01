@@ -19,7 +19,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'), // Adicionei título
+        title: const Text('ByteBank - Login'), // Adicionei título
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
