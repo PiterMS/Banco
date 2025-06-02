@@ -46,6 +46,9 @@ class _TelaPix extends State<Telapix> {
               },
               child: Text('Adicionar a Saldo'),
             ),
+
+            ElevatedButton(onPressed: () {}, child: Text('Enviar pix')),
+            ElevatedButton(onPressed: () {}, child: Text('Receber Pix')),
           ],
         ),
       ),
