@@ -12,7 +12,7 @@ class Pagina_Inical extends StatefulWidget {
 class _TelaInicio extends State<Pagina_Inical> {
   String dolar = '';
   String euro = '';
-  String bitcoin = '';
+  double saldo = 0.0; // Variável de saldo
 
   @override
   void initState() {
@@ -26,13 +26,11 @@ class _TelaInicio extends State<Pagina_Inical> {
       setState(() {
         dolar = data['results']['currencies']['USD']['buy'].toString();
         euro = data['results']['currencies']['EUR']['buy'].toString();
-        bitcoin = data['results']['cryptocurrencies']['BTC']['buy'].toString();
       });
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -52,14 +50,13 @@ class _TelaInicio extends State<Pagina_Inical> {
                     color: const Color.fromARGB(255, 97, 165, 220),
                   ),
                   child: Text(
-                    ' Seu Saldo: R\$ 0 \n ',
+                    ' Seu Saldo: R\$ $saldo \n ',
                     style: GoogleFonts.bebasNeue(
                       textStyle: Theme.of(context).textTheme.headlineLarge,
                     ),
                   ),
                 ),
               ),
-
               Center(
                 child: Container(
                   height: 80,
@@ -71,7 +68,20 @@ class _TelaInicio extends State<Pagina_Inical> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      ElevatedButton(onPressed: () {}, child: Text('Pix')),
+                      ElevatedButton(
+                        onPressed: () async {
+                          final resultado = await Navigator.pushNamed(
+                            context,
+                            '/pix',
+                          );
+                          if (resultado != null) {
+                            setState(() {
+                              saldo += resultado as double;
+                            });
+                          }
+                        },
+                        child: Text('Pix'),
+                      ),
                       ElevatedButton(onPressed: () {}, child: Text('Boleto')),
                       ElevatedButton(
                         onPressed: () {},

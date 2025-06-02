@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  const Login({super.key}); // Adicionei construtor constante
+  const Login({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    // Corrigi de createSate para createState
-    return _LoginState(); // Renomeei para _LoginState para seguir convenções
+    return _LoginState();
   }
 }
 
